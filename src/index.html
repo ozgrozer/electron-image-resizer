@@ -3,9 +3,45 @@
 <head>
   <meta charset="utf-8">
   <title>Image Resizer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  Hello World!
+  <div id="title">
+    Image Resizer
+    <img id="gear" src="gear.svg" alt="" />
+  </div>
+
+  <div id="views">
+    <div class="view show">
+      <div id="dropHereView">
+        Drop Here
+      </div>
+    </div>
+
+    <div class="view">
+      <div id="settingsView">
+        <form id="settingsForm">
+          <div class="mt">
+            <label for="widthInput">Width</label>
+            <input type="tel" id="widthInput" />
+          </div>
+
+          <div class="mt">
+            <label for="heightInput">Height</label>
+            <input type="tel" id="heightInput" />
+          </div>
+
+          <div class="mt">
+            <label for="outputFolderInput">Output Folder</label>
+            <input type="text" id="outputFolderInput" />
+          </div>
+
+          <button id="saveButton">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script src="./index.js"></script>
 </body>
 </html>

@@ -10,12 +10,14 @@
     "release": "npm run release:mac",
     "prerelease:mac": "rm -rf releases/$npm_package_version/mac && mkdirp releases/$npm_package_version/mac",
     "release:mac": "cp -R dist/*.dmg releases/$npm_package_version/mac/$npm_package_name-$npm_package_version.dmg",
-    "postrelease": "rm -rf dist"
+    "postrelease": "rm -rf dist",
+    "rebuild": "electron-rebuild -f -w electron-sharp"
   },
   "license": "MIT",
   "devDependencies": {
     "electron": "^4.0.2",
-    "electron-builder": "^20.38.5"
+    "electron-builder": "^20.38.5",
+    "electron-rebuild": "^1.8.2"
   },
   "build": {
     "publish": null,
@@ -24,5 +26,9 @@
       "node_modules",
       "src"
     ]
+  },
+  "dependencies": {
+    "electron-sharp": "^0.20.8",
+    "electron-store-data": "^1.0.0"
   }
 }

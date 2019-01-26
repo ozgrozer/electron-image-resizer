@@ -2,7 +2,14 @@ const { app, BrowserWindow } = require('electron')
 let win
 
 const createWindow = () => {
-  win = new BrowserWindow({ width: 640, height: 480, show: false })
+  win = new BrowserWindow({
+    width: 360,
+    height: 260,
+    show: false,
+    resizable: false,
+    titleBarStyle: 'hidden',
+    backgroundColor: '#3a3936'
+  })
   win.loadURL(`file://${__dirname}/src/index.html`)
   win.once('ready-to-show', () => {
     win.show()

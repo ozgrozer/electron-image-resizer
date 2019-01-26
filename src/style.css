@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: #e1e1e0;
+  cursor: default;
+  background-color: #3a3936;
+}
+body.ondrag {
+  background-color: #54534f;
+}
+
+body, input, button {
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#title {
+  height: 22px;
+  color: #c0bfbd;
+  line-height: 22px;
+  user-select: none;
+  text-align: center;
+  -webkit-app-region: drag;
+  background-color: #42413e;
+  border-bottom: 1px solid #2f2f2d;
+}
+#title #gear {
+  width: 17px;
+  float: right;
+  height: 17px;
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+#views {
+  height: calc(100% - 22px);
+}
+#views .view {
+  height: 100%;
+  display: none;
+}
+#views .view.show {
+  display: block;
+}
+
+#dropHereView, #settingsView {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dropHereView {
+  font-size: 16px;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+#settingsView {
+}
+
+.mt {
+  margin-top: 8px;
+}
+.mt:first-child {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+}
+
+input, button {
+  border: none;
+  display: block;
+  border-radius: 4px;
+}
+
+input {
+  width: 200px;
+  margin-top: 4px;
+  padding: 4px 8px;
+}
+input:focus {
+  background-color: #eee;
+}
+
+button {
+  color: #fff;
+  float: right;
+  margin-top: 16px;
+  padding: 4px 16px;
+  background-color: #28a745;
+}
+button:active {
+  background-color: #1e7e34;
+}
