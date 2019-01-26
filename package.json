@@ -1,17 +1,18 @@
 {
   "name": "electron-image-resizer",
+  "productName": "Image Resizer",
   "description": "Image resizer app.",
   "author": "@ozgrozer",
   "version": "1.0.0",
   "main": "electron.js",
   "scripts": {
+    "postinstall": "electron-builder install-app-deps",
     "start": "electron .",
     "build": "build -m && npm run release",
     "release": "npm run release:mac",
-    "prerelease:mac": "rm -rf releases/$npm_package_version/mac && mkdirp releases/$npm_package_version/mac",
-    "release:mac": "cp -R dist/*.dmg releases/$npm_package_version/mac/$npm_package_name-$npm_package_version.dmg",
-    "postrelease": "rm -rf dist",
-    "rebuild": "electron-rebuild -f -w electron-sharp"
+    "prerelease:mac": "rm -rf releases/$npm_package_version/mac && mkdir -p releases/$npm_package_version/mac",
+    "release:mac": "cp dist/*.dmg releases/$npm_package_version/mac/$npm_package_name-$npm_package_version.dmg",
+    "postrelease": "rm -rf dist"
   },
   "license": "MIT",
   "dependencies": {
@@ -20,8 +21,7 @@
   },
   "devDependencies": {
     "electron": "^4.0.2",
-    "electron-builder": "^20.38.5",
-    "electron-rebuild": "^1.8.2"
+    "electron-builder": "^20.38.5"
   },
   "build": {
     "appId": "com.ozgrozer.electron-image-resizer",
