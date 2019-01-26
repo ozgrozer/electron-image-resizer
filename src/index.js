@@ -72,10 +72,10 @@ dropHereViewSelector.ondrop = (e) => {
         dropHereViewSelector.innerHTML = `${imageOrder} / ${totalFiles}`
 
         if (imageOrder === totalFiles) {
-          dropHereViewSelector.innerHTML = `${totalFiles} Image Resized`
+          dropHereViewSelector.innerHTML = `${totalFiles} ${totalFiles > 1 ? 'Images' : 'Image'} Resized`
           setTimeout(() => {
             dropHereViewSelector.innerHTML = 'Drop Here'
-          }, 3000)
+          }, 2000)
         }
 
         imageOrder++
@@ -86,13 +86,13 @@ dropHereViewSelector.ondrop = (e) => {
 let isSettingsViewOpen = false
 gearSelector.addEventListener('click', () => {
   if (isSettingsViewOpen) {
-    isSettingsViewOpen = false
     dropHereViewSelector.parentNode.classList = 'view show'
     settingsViewSelector.parentNode.classList = 'view'
+    isSettingsViewOpen = false
   } else {
-    isSettingsViewOpen = true
     dropHereViewSelector.parentNode.classList = 'view'
     settingsViewSelector.parentNode.classList = 'view show'
+    isSettingsViewOpen = true
   }
 })
 
@@ -112,5 +112,5 @@ settingsFormSelector.addEventListener('submit', (e) => {
   saveButtonSelector.innerHTML = 'Saved'
   setTimeout(() => {
     saveButtonSelector.innerHTML = 'Save'
-  }, 3000)
+  }, 2000)
 })

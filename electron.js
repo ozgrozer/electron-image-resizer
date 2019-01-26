@@ -7,8 +7,9 @@ const createWindow = () => {
     height: 260,
     show: false,
     resizable: false,
-    titleBarStyle: 'hidden',
-    backgroundColor: '#3a3936'
+    maximizable: false,
+    backgroundColor: '#3a3936',
+    titleBarStyle: 'hiddenInset'
   })
   win.loadURL(`file://${__dirname}/src/index.html`)
   win.once('ready-to-show', () => {

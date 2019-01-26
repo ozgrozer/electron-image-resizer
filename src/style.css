@@ -26,25 +26,26 @@ body, input, button {
 }
 
 #title {
-  height: 22px;
+  height: 38px;
   color: #c0bfbd;
-  line-height: 22px;
+  line-height: 38px;
   user-select: none;
   text-align: center;
+  position: relative;
   -webkit-app-region: drag;
   background-color: #42413e;
   border-bottom: 1px solid #2f2f2d;
 }
-#title #gear {
-  width: 17px;
-  float: right;
-  height: 17px;
-  margin-top: 2px;
-  margin-right: 2px;
+#gear {
+  top: 9px;
+  right: 9px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
 }
 
 #views {
-  height: calc(100% - 22px);
+  height: calc(100% - 38px);
 }
 #views .view {
   height: 100%;

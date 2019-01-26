@@ -1,8 +1,8 @@
 {
   "name": "electron-image-resizer",
-  "description": "Electron image resizer app.",
+  "description": "Image resizer app.",
   "author": "@ozgrozer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "electron.js",
   "scripts": {
     "start": "electron .",
@@ -14,21 +14,25 @@
     "rebuild": "electron-rebuild -f -w electron-sharp"
   },
   "license": "MIT",
+  "dependencies": {
+    "electron-sharp": "^0.20.8",
+    "electron-store-data": "^1.0.0"
+  },
   "devDependencies": {
     "electron": "^4.0.2",
     "electron-builder": "^20.38.5",
     "electron-rebuild": "^1.8.2"
   },
   "build": {
+    "appId": "com.ozgrozer.electron-image-resizer",
     "publish": null,
     "files": [
       "electron.js",
       "node_modules",
       "src"
-    ]
-  },
-  "dependencies": {
-    "electron-sharp": "^0.20.8",
-    "electron-store-data": "^1.0.0"
+    ],
+    "mac": {
+      "darkModeSupport": true
+    }
   }
 }
