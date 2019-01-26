@@ -1,0 +1,2 @@
+# Electron Image Resizer
+

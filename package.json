@@ -1,0 +1,28 @@
+{
+  "name": "electron-image-resizer",
+  "description": "Electron image resizer app.",
+  "author": "@ozgrozer",
+  "version": "0.0.1",
+  "main": "electron.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "build -m && npm run release",
+    "release": "npm run release:mac",
+    "prerelease:mac": "rm -rf releases/$npm_package_version/mac && mkdirp releases/$npm_package_version/mac",
+    "release:mac": "cp -R dist/*.dmg releases/$npm_package_version/mac/$npm_package_name-$npm_package_version.dmg",
+    "postrelease": "rm -rf dist"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^4.0.2",
+    "electron-builder": "^20.38.5"
+  },
+  "build": {
+    "publish": null,
+    "files": [
+      "electron.js",
+      "node_modules",
+      "src"
+    ]
+  }
+}
