@@ -57,8 +57,8 @@ dropHereViewSelector.ondrop = (e) => {
     outputFolder: storeSettings.data.outputSettings.outputFolder
   }
 
-  files.map((file, i) => {
-    const imageOrder = i + 1
+  let imageOrder = 1
+  files.map((file) => {
     const inputFileLocation = file.path
     const outputFileLocation = `${opts.outputFolder}${file.name}`
 
@@ -77,6 +77,8 @@ dropHereViewSelector.ondrop = (e) => {
             dropHereViewSelector.innerHTML = 'Drop Here'
           }, 3000)
         }
+
+        imageOrder++
       })
   })
 }
