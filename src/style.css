@@ -14,10 +14,10 @@ html, body {
 body {
   color: #e1e1e0;
   cursor: default;
-  background-color: #3a3936;
+  background-color: #313b46;
 }
 body.ondrag {
-  background-color: #54534f;
+  background-color: #3f4c5a;
 }
 
 body, input, button {
@@ -33,8 +33,8 @@ body, input, button {
   text-align: center;
   position: relative;
   -webkit-app-region: drag;
-  background-color: #42413e;
-  border-bottom: 1px solid #2f2f2d;
+  background-color: #38424c;
+  border-bottom: 1px solid #000;
 }
 #gear {
   top: 9px;
@@ -65,7 +65,9 @@ body, input, button {
 
 #dropHereView {
   font-size: 16px;
+  line-height: 26px;
   user-select: none;
+  text-align: center;
   text-transform: uppercase;
 }
 

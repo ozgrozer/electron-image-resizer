@@ -85,7 +85,7 @@ const createWindow = () => {
     frame: false,
     resizable: false,
     maximizable: false,
-    backgroundColor: '#3a3936',
+    backgroundColor: '#313b46',
     titleBarStyle: 'hiddenInset'
   })
   win.loadURL(`file://${__dirname}/src/index.html`)
