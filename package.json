@@ -1,6 +1,6 @@
 {
   "license": "MIT",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "electron.js",
   "productName": "Image Resizer",
   "name": "electron-image-resizer",
@@ -30,8 +30,8 @@
       "node_modules"
     ],
     "mac": {
-      "target": ["dmg"],
       "darkModeSupport": true,
+      "target": ["dmg", "zip"],
       "category": "productivity"
     }
   }
