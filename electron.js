@@ -82,6 +82,7 @@ const createWindow = () => {
     width: 360,
     height: 260,
     show: false,
+    frame: false,
     resizable: false,
     maximizable: false,
     backgroundColor: '#3a3936',
