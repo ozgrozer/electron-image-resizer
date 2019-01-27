@@ -224,7 +224,7 @@ buffer-from@^1.0.0:
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
   integrity sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
 
-builder-util-runtime@8.1.1, builder-util-runtime@^8.1.1:
+builder-util-runtime@8.1.1, builder-util-runtime@^8.1.1, builder-util-runtime@~8.1.0:
   version "8.1.1"
   resolved "https://registry.yarnpkg.com/builder-util-runtime/-/builder-util-runtime-8.1.1.tgz#f2f6fc43e33d26892bd491667fc746ad69bccc50"
   integrity sha512-+ieS4PMB33vVE2S3ZNWBEQJ1zKmAs/agrBdh7XadE1lKLjrH4aXYuOh9OOGdxqIRldhlhNBaF+yKMMEFOdNVig==
@@ -652,6 +652,21 @@ electron-store-data@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/electron-store-data/-/electron-store-data-1.0.0.tgz#494f85ac03e79617f2530f40db70e2fe49a79027"
   integrity sha512-qsUnQQT8vR8s5kqFCHdZmhnX13BTV+NPABejqANHXCxJP41oeAViN5GEftpUP1c4UDDhEv+5PblP5jZ5CiyPBQ==
+
+electron-updater@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-4.0.6.tgz#9c4f495ae0e80bf4425e3e1b801c5ed2ab933c2d"
+  integrity sha512-JPGLME6fxJcHG8hX7HWFl6Aew6iVm0DkcrENreKa5SUJCHG+uUaAhxDGDt+YGcNkyx1uJ6eBGMvFxDTLUv67pg==
+  dependencies:
+    bluebird-lst "^1.0.6"
+    builder-util-runtime "~8.1.0"
+    fs-extra-p "^7.0.0"
+    js-yaml "^3.12.0"
+    lazy-val "^1.0.3"
+    lodash.isequal "^4.5.0"
+    pako "^1.0.7"
+    semver "^5.6.0"
+    source-map-support "^0.5.9"
 
 electron@^4.0.2:
   version "4.0.2"
@@ -1121,7 +1136,7 @@ isstream@~0.1.2:
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
-js-yaml@^3.12.1:
+js-yaml@^3.12.0, js-yaml@^3.12.1:
   version "3.12.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.1.tgz#295c8632a18a23e054cf5c9d3cecafe678167600"
   integrity sha512-um46hB9wNOKlwkHgiuyEVAybXBjwFUV0Z/RaHJblRd9DXltue9FTYvzCr9ErQrK9Adz5MU4gHWVaNUfdmrC8qA==
@@ -1210,6 +1225,11 @@ locate-path@^3.0.0:
   dependencies:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
+
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
 
 loud-rejection@^1.0.0:
   version "1.6.0"
@@ -1498,6 +1518,11 @@ package-json@^4.0.0:
     registry-auth-token "^3.0.1"
     registry-url "^3.0.3"
     semver "^5.1.0"
+
+pako@^1.0.7:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.8.tgz#6844890aab9c635af868ad5fecc62e8acbba3ea4"
+  integrity sha512-6i0HVbUfcKaTv+EG8ZTr75az7GFXcLYk9UyLEg7Notv/Ma+z/UG3TCoz6GiNeOrn1E/e63I0X/Hpw18jHOTUnA==
 
 parse-color@^1.0.0:
   version "1.0.0"
@@ -1896,7 +1921,7 @@ single-line-log@^1.1.2:
   dependencies:
     string-width "^1.0.1"
 
-source-map-support@^0.5.10:
+source-map-support@^0.5.10, source-map-support@^0.5.9:
   version "0.5.10"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.10.tgz#2214080bc9d51832511ee2bab96e3c2f9353120c"
   integrity sha512-YfQ3tQFTK/yzlGJuX8pTwa4tifQj4QS2Mj7UegOu8jAz59MqIiMGPXxQhVQiIMNzayuUSF/jEuVnfFF5JqybmQ==
