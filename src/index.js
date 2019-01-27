@@ -63,7 +63,7 @@ const resizeImages = (opts) => {
         if (imageOrder === totalFiles) {
           dropHereViewSelector.innerHTML = `${totalFiles} ${totalFiles > 1 ? 'Images' : 'Image'} Resized`
           setTimeout(() => {
-            dropHereViewSelector.innerHTML = 'Drop Here'
+            dropHereViewSelector.innerHTML = 'drop images here<br />or click to select'
           }, 2000)
         }
 
