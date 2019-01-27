@@ -1,20 +1,12 @@
 {
-  "name": "electron-image-resizer",
-  "productName": "Image Resizer",
-  "description": "Image resizer app.",
-  "author": "@ozgrozer",
+  "license": "MIT",
   "version": "1.0.0",
   "main": "electron.js",
-  "scripts": {
-    "postinstall": "electron-builder install-app-deps",
-    "start": "electron .",
-    "build": "build -m && npm run release",
-    "release": "npm run release:mac",
-    "prerelease:mac": "rm -rf releases/$npm_package_version/mac && mkdir -p releases/$npm_package_version/mac",
-    "release:mac": "cp dist/*.dmg releases/$npm_package_version/mac/$npm_package_name-$npm_package_version.dmg",
-    "postrelease": "rm -rf dist"
-  },
-  "license": "MIT",
+  "productName": "Image Resizer",
+  "name": "electron-image-resizer",
+  "description": "Image resizer app.",
+  "homepage": "https://github.com/ozgrozer/electron-image-resizer",
+  "author": "Ozgur Ozer <ozgr@live.com> (https://github.com/ozgrozer/)",
   "dependencies": {
     "electron-sharp": "^0.20.8",
     "electron-store-data": "^1.0.0",
@@ -24,20 +16,23 @@
     "electron": "^4.0.2",
     "electron-builder": "^20.38.5"
   },
+  "scripts": {
+    "start": "electron .",
+    "build": "build -m",
+    "build-and-publish": "build -m -p always",
+    "postinstall": "electron-builder install-app-deps"
+  },
   "build": {
     "appId": "com.ozgrozer.electron-image-resizer",
-    "publish": null,
     "files": [
+      "src",
       "electron.js",
-      "node_modules",
-      "src"
+      "node_modules"
     ],
     "mac": {
+      "target": ["dmg"],
       "darkModeSupport": true,
-      "category": "productivity",
-      "target": [
-        "zip"
-      ]
+      "category": "productivity"
     }
   }
 }
