@@ -2,7 +2,7 @@
 [![tag](https://img.shields.io/github/tag/ozgrozer/electron-image-resizer.svg)](https://github.com/ozgrozer/electron-image-resizer/tags)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ozgrozer/electron-image-resizer/blob/master/license)
 
-An image resizer app for desktop.
+An image resizer app.
 
 ## Download
 MacOS: [electron-image-resizer-1.2.1.dmg](https://github.com/ozgrozer/electron-image-resizer/releases/download/v1.2.1/electron-image-resizer-1.2.1.dmg) (62 MB)
