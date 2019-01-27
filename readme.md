@@ -5,7 +5,7 @@
 An image resizer app for desktop.
 
 ## Download
-[MacOS - v1.1.0 - 62 MB](https://github.com/ozgrozer/electron-image-resizer/releases/download/v1.1.0/electron-image-resizer-1.1.0.dmg)
+MacOS: [electron-image-resizer-1.1.0.dmg](https://github.com/ozgrozer/electron-image-resizer/releases/download/v1.1.0/electron-image-resizer-1.1.0.dmg) (62 MB)
 
 Windows
 
