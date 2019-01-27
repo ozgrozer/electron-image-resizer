@@ -7,7 +7,7 @@ An image resizer app.
 ![](preview.gif)
 
 ## Download
-MacOS: [electron-image-resizer-1.3.2.dmg](https://github.com/ozgrozer/electron-image-resizer/releases/download/v1.3.2/electron-image-resizer-1.3.2.dmg) (62 MB)
+MacOS: [electron-image-resizer-1.3.3.dmg](https://github.com/ozgrozer/electron-image-resizer/releases/download/v1.3.3/electron-image-resizer-1.3.3.dmg) (62 MB)
 
 ## Development
 ```sh
