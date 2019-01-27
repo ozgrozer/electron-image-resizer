@@ -1,4 +1,6 @@
 const { app, BrowserWindow } = require('electron')
+const { autoUpdater } = require('electron-updater')
+
 let win
 
 const createWindow = () => {
@@ -18,6 +20,8 @@ const createWindow = () => {
   win.on('closed', () => {
     win = null
   })
+
+  autoUpdater.checkForUpdatesAndNotify()
 }
 
 app.on('ready', createWindow)
