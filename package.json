@@ -20,6 +20,7 @@
     "start": "electron .",
     "build": "build -m",
     "build-and-publish": "build -m -p always",
+    "postbuild-and-publish": "rm -rf dist",
     "postinstall": "electron-builder install-app-deps"
   },
   "build": {
