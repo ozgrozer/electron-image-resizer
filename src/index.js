@@ -17,6 +17,7 @@ const storeSettings = new Store({
 const gearSelector = document.getElementById('gear')
 const dropHereViewSelector = document.getElementById('dropHereView')
 const settingsViewSelector = document.getElementById('settingsView')
+const selectFilesInputSelector = document.getElementById('selectFilesInput')
 
 const settingsFormSelector = document.getElementById('settingsForm')
 const widthInputSelector = document.getElementById('widthInput')
@@ -28,22 +29,10 @@ widthInputSelector.value = storeSettings.data.outputSettings.width
 heightInputSelector.value = storeSettings.data.outputSettings.height
 outputFolderInputSelector.value = storeSettings.data.outputSettings.outputFolder
 
-dropHereViewSelector.ondragover = (e) => {
-  e.preventDefault()
-  document.body.classList = 'ondrag'
-}
-dropHereViewSelector.ondragleave = (e) => {
-  e.preventDefault()
-  document.body.classList = ''
-}
-dropHereViewSelector.ondrop = (e) => {
-  e.preventDefault()
-  document.body.classList = ''
-
-  const selectedFiles = e.dataTransfer.files
+const resizeImages = (opts) => {
   const files = []
-  Object.keys(selectedFiles).map((key) => {
-    const file = selectedFiles[key]
+  Object.keys(opts.files).map((key) => {
+    const file = opts.files[key]
     files[key] = {
       name: file.name,
       path: file.path
@@ -51,7 +40,7 @@ dropHereViewSelector.ondrop = (e) => {
   })
   const totalFiles = Object.keys(files).length
 
-  const opts = {
+  const settings = {
     width: parseInt(storeSettings.data.outputSettings.width),
     height: parseInt(storeSettings.data.outputSettings.height),
     outputFolder: storeSettings.data.outputSettings.outputFolder
@@ -60,10 +49,10 @@ dropHereViewSelector.ondrop = (e) => {
   let imageOrder = 1
   files.map((file) => {
     const inputFileLocation = file.path
-    const outputFileLocation = `${opts.outputFolder}${file.name}`
+    const outputFileLocation = `${settings.outputFolder}${file.name}`
 
     sharp(inputFileLocation)
-      .resize(opts.width, opts.height)
+      .resize(settings.width, settings.height)
       .toFile(outputFileLocation, (err, info) => {
         if (err) {
           window.alert(err)
@@ -81,6 +70,30 @@ dropHereViewSelector.ondrop = (e) => {
         imageOrder++
       })
   })
+}
+
+dropHereViewSelector.onclick = () => {
+  selectFilesInputSelector.click()
+}
+selectFilesInputSelector.onchange = () => {
+  const files = selectFilesInputSelector.files
+  resizeImages({ files: files })
+}
+
+dropHereViewSelector.ondragover = (e) => {
+  e.preventDefault()
+  document.body.classList = 'ondrag'
+}
+dropHereViewSelector.ondragleave = (e) => {
+  e.preventDefault()
+  document.body.classList = ''
+}
+dropHereViewSelector.ondrop = (e) => {
+  e.preventDefault()
+  document.body.classList = ''
+
+  const files = e.dataTransfer.files
+  resizeImages({ files: files })
 }
 
 let isSettingsViewOpen = false

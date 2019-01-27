@@ -88,6 +88,7 @@ const createWindow = () => {
     titleBarStyle: 'hiddenInset'
   })
   win.loadURL(`file://${__dirname}/src/index.html`)
+  /* win.webContents.openDevTools() */
   win.once('ready-to-show', () => {
     win.show()
   })
